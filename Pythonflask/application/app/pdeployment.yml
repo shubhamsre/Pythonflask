@@ -1,7 +1,7 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: flaskappv3
+  name: flaskappv1
 spec:
   selector:
     matchLabels:
@@ -13,8 +13,8 @@ spec:
         app: flask
     spec:
       containers:
-      - name: flask-python2-v2
-        image: dockershubid12/flaskapp:v3
+      - name: flask-python2-v1
+        image: dockershubid12/flaskapp:v1
        # replica: 2
         ports:
         - containerPort: 5000
