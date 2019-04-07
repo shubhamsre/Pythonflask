@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: flaskappv3
+  name: flaskappv1
 spec:
   selector:
     app: flask
