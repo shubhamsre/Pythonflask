@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  web:
+    #network_mode: host
+    #network: host
+    image: flask-hello-app
+    build: 
+      network: host
+      context: .
+    ports:
+            - "5000:5000"
+    #network: host 
+
+  redis:
+    image: redis:alpine
+ 
+      

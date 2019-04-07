@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: flaskappv3
+spec:
+  selector:
+    app: flask
+  type: NodePort
+  #type: LoadBalancer
+  ports:
+    - name: my-flask-port
+      port: 5000
+      nodePort: 31111
+      targetPort: 5000                       
